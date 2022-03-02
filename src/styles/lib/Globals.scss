@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+:root {
+  --white: #fdfefe;
+  --dark-gray-color: #1b2631;
+  --button-color: #76d7c4;
+  --alert-color: #e67e22;
+  --danger-color: #b03a2e;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: var(--white);
+  color: var(--dark-gray-color);
+}
