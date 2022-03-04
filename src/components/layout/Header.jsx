@@ -4,13 +4,12 @@ const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    console.log("Inicializando");
     if (localStorage.getItem("dark-mode")) {
       const darkOnLocal = JSON.parse(localStorage.getItem("dark-mode"));
       setDarkMode(darkOnLocal);
       if (darkOnLocal) {
-        document.getElementById("dark-mode-button").classList.add("active");
         document.body.classList.add("dark");
+        document.getElementById("dark-mode-button").classList.add("active");
       }
     } else {
       localStorage.setItem("dark-mode", darkMode);
@@ -24,8 +23,8 @@ const Header = () => {
   };
 
   const handleDarkMode = () => {
-    document.getElementById("dark-mode-button").classList.toggle("active");
     document.body.classList.toggle("dark");
+    document.getElementById("dark-mode-button").classList.toggle("active");
     localStorage.setItem("dark-mode", !darkMode);
     setDarkMode(!darkMode);
   };
@@ -35,6 +34,8 @@ const Header = () => {
       <h1 className="header__title">ToDo</h1>
 
       <nav className="navbar" id="menu-navbar">
+        <button className="info-button">?</button>
+
         <div
           id="dark-mode-button"
           className="dark-mode-button"
@@ -43,25 +44,21 @@ const Header = () => {
           <div className="dark-mode-button__toggle"></div>
         </div>
 
-        {/* <div className="users">
-          <p className="users__title">User:</p>
-          <p className="users__current">Nerio</p>
+        <div id="users" className="users">
+          <p className="users__current">No Users</p>
           <ul className="users__list">
-            <li className="users__list--item">Nerio</li>
-            <li className="users__list--item">Alejandra</li>
-            <li className="users__list--item">Sol</li>
-            <li className="users__list--item">Creater New User</li>
+            {/* <li className="users__list--item">Nerio</li> */}
+            <li className="users__list--item">Creater user</li>
           </ul>
-        </div> */}
+        </div>
 
-        {/* <p>User</p>
-        <ul className="navbar__list">
-          <li className="navbar__list--item">About</li>
+        <ul className="social-media">
+          <li className="social-media__link">
+            <a href="/">
+              <i></i>
+            </a>
+          </li>
         </ul>
-
-        <ul className="navbar__social-media">
-          <li className="navbar__social-media--item"></li>
-        </ul> */}
       </nav>
 
       <div id="menu-btn" className="header__button" onClick={handleOpenMenu}>
