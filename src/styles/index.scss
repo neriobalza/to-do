@@ -1,6 +1,14 @@
 // Lib
 @import "./lib/Globals.scss";
+// Icons
+@import "./icons/icons.scss";
 // components
 // Layout components
 @import "./components/layout/Layout.scss";
 @import "./components/layout/Header.scss";
+// Template Components
+@import "./components/templates/ToDoInput.scss";
+@import "./components/templates/ToDoFilters.scss";
+@import "./components/templates/ToDoList.scss";
+// page
+@import "./page/ToDo.scss";
