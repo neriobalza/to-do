@@ -1,0 +1,85 @@
+.todo-item {
+  background: $white;
+  display: flex;
+  gap: 1rem;
+  min-height: 5.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0px 0px 5px 5px $rgba-gray;
+  overflow: hidden;
+
+  &__delete {
+    width: 100%;
+    max-width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $green;
+
+    &--bin {
+      font-size: 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+  }
+
+  &__date {
+    width: 100%;
+    max-width: 5rem;
+    padding: 0.5rem;
+    display: grid;
+    gap: 0.3rem;
+    background: $green;
+
+    &--month {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    &--day {
+      font-size: 3rem;
+      line-height: 3rem;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  &__data {
+    width: 100%;
+    padding-top: 0.5rem;
+
+    &.done {
+      text-decoration: line-through;
+    }
+  }
+
+  &__done {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+
+    &--checkbox {
+      font-size: 1.6rem;
+      color: $green;
+      background: none;
+      cursor: initial;
+      border: none;
+
+      &.icon-checkbox-unchecked {
+        cursor: pointer;
+        &:active {
+          background: $green;
+        }
+      }
+    }
+  }
+}
+
+body.dark {
+  .todo-item {
+    background: $very-dark-gray;
+  }
+}
