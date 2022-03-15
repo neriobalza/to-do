@@ -44,13 +44,12 @@ const Header = () => {
           <div className="dark-mode-button__toggle"></div>
         </div>
 
-        <div id="users" className="users">
+        {/* <div id="users" className="users">
           <p className="users__current">No Users</p>
           <ul className="users__list">
-            {/* <li className="users__list--item">Nerio</li> */}
             <li className="users__list--item">Creater user</li>
           </ul>
-        </div>
+        </div> */}
 
         <ul className="social-media">
           <li className="social-media__link">

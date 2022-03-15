@@ -1,7 +1,9 @@
 import React from "react";
 import ToDoItem from "./ToDoItem";
 
-const ToDoList = ({ list, save }) => {
+const ToDoList = ({ list, save, filterData }) => {
+  const { filter, data } = filterData;
+
   const handleChangeStatus = (event) => {
     const id = event.target.parentNode.parentNode.id;
     let taskDone = list.find((taskE) => {
@@ -12,7 +14,6 @@ const ToDoList = ({ list, save }) => {
       return taskE.id !== id;
     });
     newArray.push(taskDone);
-    console.log(newArray);
     save(newArray);
   };
 
@@ -26,16 +27,35 @@ const ToDoList = ({ list, save }) => {
 
   return (
     <section className="todo-list">
-      {list.map((task) => {
-        return (
-          <ToDoItem
-            task={task}
-            key={task.id}
-            handleChangeStatus={handleChangeStatus}
-            handleDelete={handleDelete}
-          />
-        );
-      })}
+      {!filter
+        ? list.map((task) => {
+            return (
+              <ToDoItem
+                task={task}
+                key={task.id}
+                handleChangeStatus={handleChangeStatus}
+                handleDelete={handleDelete}
+              />
+            );
+          })
+        : list
+            .filter((task) => {
+              if (data.type === "done") {
+                return task.done === data.value;
+              } else {
+                return task.tag === data.value;
+              }
+            })
+            .map((task) => {
+              return (
+                <ToDoItem
+                  task={task}
+                  key={task.id}
+                  handleChangeStatus={handleChangeStatus}
+                  handleDelete={handleDelete}
+                />
+              );
+            })}
     </section>
   );
 };

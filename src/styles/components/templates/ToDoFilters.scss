@@ -1,0 +1,48 @@
+.todo-filters {
+  width: 100%;
+  padding: 0 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--current {
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    &--button {
+      background: none;
+      color: $green;
+      border: none;
+      font-size: 1.6rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  &__list {
+    padding: 2rem 0;
+    align-items: center;
+    display: none;
+    // gap: 2rem;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+
+    li {
+      width: 33%;
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      font-weight: bold;
+      color: $green;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+}

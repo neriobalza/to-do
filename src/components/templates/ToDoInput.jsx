@@ -2,6 +2,7 @@ import React from "react";
 
 const ToDoInput = ({ save }) => {
   const handleSaveTask = (event) => {
+    event.preventDefault();
     const monthList = [
       "Jan",
       "Feb",
@@ -54,7 +55,7 @@ const ToDoInput = ({ save }) => {
         New Task <i className="icon-quill"></i>
       </label>
 
-      <form className="input-tag" id="input-tag">
+      <form className="input-tag" id="input-tag" onSubmit={handleSaveTask}>
         <input
           className="input"
           type="text"
@@ -62,6 +63,7 @@ const ToDoInput = ({ save }) => {
           placeholder="Your task..."
           name="task"
           id="task"
+          autoComplete="off"
         />
         <select className="tag" name="tag" id="tag">
           <option value="untaged" hidden>
@@ -74,7 +76,7 @@ const ToDoInput = ({ save }) => {
         </select>
       </form>
       <button className="button" onClick={handleSaveTask}>
-        Create Task
+        <p>Create Task</p>
       </button>
     </section>
   );
