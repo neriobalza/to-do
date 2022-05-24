@@ -17,11 +17,6 @@ const Header = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleOpenMenu = () => {
-    document.getElementById("menu-btn").classList.toggle("active");
-    document.getElementById("menu-navbar").classList.toggle("active");
-  };
-
   const handleDarkMode = () => {
     document.body.classList.toggle("dark");
     document.getElementById("dark-mode-button").classList.toggle("active");
@@ -33,37 +28,16 @@ const Header = () => {
     <header className="header">
       <h1 className="header__title">ToDo</h1>
 
-      <nav className="navbar" id="menu-navbar">
-        <button className="info-button">?</button>
-
-        <div
+      <div className="header__buttons" id="menu-navbar">
+        <button
           id="dark-mode-button"
           className="dark-mode-button"
           onClick={handleDarkMode}
         >
+          <div className="dark-mode-button__icon">🌞</div>
+          <div className="dark-mode-button__icon">🌝</div>
           <div className="dark-mode-button__toggle"></div>
-        </div>
-
-        {/* <div id="users" className="users">
-          <p className="users__current">No Users</p>
-          <ul className="users__list">
-            <li className="users__list--item">Creater user</li>
-          </ul>
-        </div> */}
-
-        <ul className="social-media">
-          <li className="social-media__link">
-            <a href="/">
-              <i></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div id="menu-btn" className="header__button" onClick={handleOpenMenu}>
-        <div></div>
-        <div></div>
-        <div></div>
+        </button>
       </div>
     </header>
   );

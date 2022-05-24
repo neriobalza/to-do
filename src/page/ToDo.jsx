@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 
 import ToDoInput from "../components/templates/ToDoInput";
@@ -42,7 +43,7 @@ const ToDo = () => {
   return (
     <main className="todo">
       <ToDoInput save={handleInputTask} />
-      <ToDoFilters setFilter={handleSetFilter} />
+      {/* <ToDoFilters setFilter={handleSetFilter} /> */}
       <ToDoList list={todoList} save={handleSetNewList} filterData={filter} />
     </main>
   );
