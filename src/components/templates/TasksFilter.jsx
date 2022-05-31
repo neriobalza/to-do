@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ToDoFilters = ({ setFilter }) => {
+const TasksFilter = ({ setFilter }) => {
   const [filterToShow, setFilterToShow] = useState("all");
   const filters = [
     { id: "done", type: "done", value: true },
@@ -72,4 +72,4 @@ const ToDoFilters = ({ setFilter }) => {
   );
 };
 
-export default ToDoFilters;
+export default TasksFilter;

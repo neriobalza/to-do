@@ -4,12 +4,11 @@
 @import "./icons/icons.scss";
 // components
 // Layout components
-@import "./components/layout/Layout.scss";
 @import "./components/layout/Header.scss";
 // Template Components
-@import "./components/templates/ToDoInput.scss";
-@import "./components/templates/ToDoFilters.scss";
-@import "./components/templates/ToDoList.scss";
-@import "./components/templates/ToDoItem.scss";
+@import "./components/templates/TaskInput.scss";
+@import "./components/templates/TasksFilter.scss";
+@import "./components/templates/TasksList.scss";
+@import "./components/templates/Task.scss";
 // page
-@import "./page/ToDo.scss";
+@import "./page/TodoApp.scss";

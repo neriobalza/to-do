@@ -1,7 +1,6 @@
-.todo-item {
+.task {
   background: $white;
   display: flex;
-  gap: 1rem;
   min-height: 5.5rem;
   border-radius: 0.8rem;
   box-shadow: 0px 0px 5px 5px $rgba-gray;
@@ -48,7 +47,14 @@
 
   &__data {
     width: 100%;
-    padding-top: 0.5rem;
+    min-width: 150px;
+    padding: 0.5rem 1rem;
+
+    &--icon {
+      display: inline-block;
+      font-size: 2rem;
+      padding-right: 0.5rem;
+    }
 
     &.done {
       text-decoration: line-through;
@@ -60,7 +66,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 4rem;
+    width: 100%;
+    max-width: 3.6rem;
 
     &--checkbox {
       font-size: 1.6rem;
@@ -80,7 +87,7 @@
 }
 
 body.dark {
-  .todo-item {
+  .task {
     background: $very-dark-gray;
   }
 }

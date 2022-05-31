@@ -1,0 +1,16 @@
+.tasks-list {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 380px;
+
+  // @media screen and (min-width: 615px) {
+  //   grid-template-columns: repeat(2, 1fr);
+  //   max-width: 775px;
+  // }
+  // @media screen and (min-width: 870px) {
+  //   grid-template-columns: repeat(3, 1fr);
+  //   max-width: 1170px;
+  // }
+}

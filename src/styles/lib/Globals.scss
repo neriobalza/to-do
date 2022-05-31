@@ -24,6 +24,14 @@ body {
   font-family: "Quicksand", sans-serif;
   background: $white;
   color: $very-dark-gray;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+    height: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $rgba-gray;
+  }
 }
 
 body.dark {

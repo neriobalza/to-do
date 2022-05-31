@@ -1,6 +1,6 @@
 import React from "react";
 
-const ToDoInput = ({ save }) => {
+const TaskInput = ({ save }) => {
   const handleSaveTask = (event) => {
     event.preventDefault();
     const monthList = [
@@ -24,16 +24,17 @@ const ToDoInput = ({ save }) => {
     const tag = document.getElementById("tag").value;
     const id =
       date.getDate() +
-      "-" +
+      "" +
       (date.getMonth() + 1) +
-      "-" +
+      "" +
       date.getFullYear() +
-      ":" +
+      "_" +
       date.getHours() +
-      ":" +
+      "" +
       date.getMinutes() +
-      ":" +
+      "" +
       date.getSeconds();
+
     const taskObject = {
       id: id,
       date: {
@@ -42,13 +43,13 @@ const ToDoInput = ({ save }) => {
       },
       data: task,
       tag: tag,
-      done: false,
     };
     if (task) {
       save(taskObject);
       document.getElementById("input-tag").reset();
     }
   };
+
   return (
     <section className="todo-input">
       <label className="label" htmlFor="task">
@@ -71,15 +72,15 @@ const ToDoInput = ({ save }) => {
           </option>
           <option value="untaged">Untaged</option>
           <option value="home">Home</option>
-          <option value="work">Wok</option>
+          <option value="work">Work</option>
           <option value="school">School</option>
         </select>
       </form>
       <button className="button" onClick={handleSaveTask}>
-        <p>Create Task</p>
+        <p className="button__text">Create Task</p>
       </button>
     </section>
   );
 };
 
-export default ToDoInput;
+export default TaskInput;

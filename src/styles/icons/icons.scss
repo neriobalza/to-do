@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("./fonts/icomoon.eot?m4gk8l");
-  src: url("./fonts/icomoon.eot?m4gk8l#iefix") format("embedded-opentype"),
-    url("./fonts/icomoon.ttf?m4gk8l") format("truetype"),
-    url("./fonts/icomoon.woff?m4gk8l") format("woff"),
-    url("./fonts/icomoon.svg?m4gk8l#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?ghnms1");
+  src: url("fonts/icomoon.eot?ghnms1#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?ghnms1") format("truetype"),
+    url("fonts/icomoon.woff?ghnms1") format("woff"),
+    url("fonts/icomoon.svg?ghnms1#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,14 +26,29 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-home:before {
+  content: "\e900";
+}
+.icon-home2:before {
+  content: "\e901";
+}
+.icon-home3:before {
+  content: "\e902";
+}
 .icon-pencil:before {
   content: "\e905";
 }
-.icon-pencil1:before {
+.icon-pencil2:before {
   content: "\e906";
 }
 .icon-quill:before {
   content: "\e907";
+}
+.icon-school:before {
+  content: "\e91f";
+}
+.icon-library:before {
+  content: "\e921";
 }
 .icon-tag:before {
   content: "\e935";
@@ -41,26 +56,23 @@
 .icon-tags:before {
   content: "\e936";
 }
-.icon-cog:before {
-  content: "\e994";
+.icon-wrench:before {
+  content: "\e991";
+}
+.icon-hammer:before {
+  content: "\e996";
 }
 .icon-bin:before {
   content: "\e9ac";
 }
-.icon-plus:before {
-  content: "\ea0a";
+.icon-work:before {
+  content: "\e9ae";
 }
-.icon-minus:before {
-  content: "\ea0b";
+.icon-untaged:before {
+  content: "\e9c9";
 }
-.icon-cross:before {
-  content: "\ea0f";
-}
-.icon-checkmark:before {
-  content: "\ea10";
-}
-.icon-checkmark2:before {
-  content: "\ea11";
+.icon-earth:before {
+  content: "\e9ca";
 }
 .icon-checkbox-checked:before {
   content: "\ea52";
