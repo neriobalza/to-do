@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import TaskInput from "../components/templates/TaskInput";
+import TasksFilter from "../components/templates/TasksFilter";
 import TasksList from "../components/templates/TasksList";
 
 const TodoApp = () => {
@@ -65,6 +66,9 @@ const TodoApp = () => {
   return (
     <main className="todo">
       <TaskInput save={handleCreateTask} />
+
+      <TasksFilter />
+
       {todoTasks.length > 0 && (
         <TasksList
           tasksList={todoTasks}
@@ -72,6 +76,7 @@ const TodoApp = () => {
           filter={filter}
         />
       )}
+
       {doneTasks.length > 0 && (
         <TasksList
           tasksList={doneTasks}

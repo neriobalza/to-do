@@ -1,48 +1,82 @@
-.todo-filters {
-  width: 100%;
-  padding: 0 1rem;
-  max-width: 500px;
+.tasks-filter {
   margin: 0 auto;
+  width: 100%;
+  max-width: 50rem;
+  // padding: 0 2rem;
 
   &__header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    font-size: 1.6rem;
 
-    &--current {
-      font-size: 1.6rem;
-      font-weight: bold;
-      text-transform: capitalize;
-    }
-
-    &--button {
-      background: none;
-      color: $green;
-      border: none;
-      font-size: 1.6rem;
-      font-weight: bold;
+    span {
       cursor: pointer;
     }
   }
 
   &__list {
-    padding: 2rem 0;
-    align-items: center;
-    display: none;
-    // gap: 2rem;
-    row-gap: 2rem;
-    flex-wrap: wrap;
-
-    li {
-      width: 33%;
-      font-size: 1.6rem;
-      text-transform: capitalize;
-      font-weight: bold;
-      color: $green;
-    }
+    height: auto;
+    max-height: 0;
+    transition: 500ms;
+    overflow: hidden;
 
     &.active {
-      display: flex;
+      max-height: 10rem;
+    }
+    li {
+      margin-top: 0.75rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      cursor: pointer;
     }
   }
 }
+
+// .todo-filters {
+//   width: 100%;
+//   padding: 0 1rem;
+//   max-width: 500px;
+//   margin: 0 auto;
+
+//   &__header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+
+//     &--current {
+//       font-size: 1.6rem;
+//       font-weight: bold;
+//       text-transform: capitalize;
+//     }
+
+//     &--button {
+//       background: none;
+//       color: $green;
+//       border: none;
+//       font-size: 1.6rem;
+//       font-weight: bold;
+//       cursor: pointer;
+//     }
+//   }
+
+//   &__list {
+//     padding: 2rem 0;
+//     align-items: center;
+//     display: none;
+//     // gap: 2rem;
+//     row-gap: 2rem;
+//     flex-wrap: wrap;
+
+//     li {
+//       width: 33%;
+//       font-size: 1.6rem;
+//       text-transform: capitalize;
+//       font-weight: bold;
+//       color: $green;
+//     }
+
+//     &.active {
+//       display: flex;
+//     }
+//   }
+// }
