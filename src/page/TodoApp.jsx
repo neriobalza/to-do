@@ -40,9 +40,16 @@ const TodoApp = () => {
     setDoneTasks([...newDoneList]);
   };
 
-  // eslint-disable-next-line no-unused-vars
-  const handleFilterList = (newFilter) => {
-    setFilter(newFilter);
+  const handleSetFilter = (newFilter) => {
+    switch (newFilter) {
+      case "all":
+        setFilter("");
+        break;
+
+      default:
+        setFilter(newFilter);
+        break;
+    }
   };
 
   // Getting Todo and Done tasks from the localstorage...
@@ -67,7 +74,12 @@ const TodoApp = () => {
     <main className="todo">
       <TaskInput save={handleCreateTask} />
 
-      <TasksFilter />
+      <TasksFilter
+        setFilter={handleSetFilter}
+        filter={filter}
+        todo={todoTasks}
+        done={doneTasks}
+      />
 
       {todoTasks.length > 0 && (
         <TasksList

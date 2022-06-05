@@ -34,8 +34,8 @@ const Header = () => {
           className="dark-mode-button"
           onClick={handleDarkMode}
         >
+          <div className="dark-mode-button__icon">🌜</div>
           <div className="dark-mode-button__icon">🌞</div>
-          <div className="dark-mode-button__icon">🌝</div>
           <div className="dark-mode-button__toggle"></div>
         </button>
       </div>
